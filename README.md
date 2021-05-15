@@ -1,4 +1,4 @@
-# The Toxic Doge Barkpaper
+# The TOXIC DOGE Barkpaper
 
 ## Versions
 

@@ -3,7 +3,7 @@
     justify-content:center;
     align-items: center;
     flex-direction:column;
-    min-height:100vh;
+    min-height:90vh;
     width: auto;
     text-align: center;
 }
@@ -14,7 +14,7 @@
 
 .box .btn {
     border: none;
-    background-color: green;
+    background-color: #0d791f;
     color: white;
     padding: 12px 24px;
     text-align: center;
@@ -27,6 +27,55 @@
 }
 
 .box .btn:hover {
-    background-color: lime;
+    background-color: #0c940c;
     color: white;
+}
+
+nav.navbar {
+    padding: 0;
+    background: #0d791f;
+}
+
+ul.mr-auto li {
+    border-right:1px solid #0c940c;
+}
+
+ul.ml-auto li {
+    border-left:1px solid #0c940c;
+}
+
+ul.navbar-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+    height: 5vh;
+    line-height: 5vh;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+ul.navbar-nav a {
+	display: block;
+	padding: 0 28px;
+    min-width: 120px;
+    text-align: center;
+	color: #ccece6;
+	text-decoration: none;
+}
+
+ul.navbar-nav a:hover,
+ul.navbar-nav li.current a {
+	background:#0c940c;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5vh;
+    line-height: 5vh;
+    width: 100%;
+    background-color: #0d791f;
+    color: white;
+    text-align: center;
 }

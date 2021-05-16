@@ -17,17 +17,49 @@
     <title>TOXIC DOGE | The Future of Crypto</title>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="barkpaper.pdf" target="_blank">Barkpaper</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://bscscan.com/address/0x7d31dcdca5f5b2b101eaeab5d921c1c36e8ba0b3" target="_blank">Contract</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick=addmm()>Add to MetaMask</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
     <div class="box">
         <h1>TOXIC DOGE</h1>
         <img src="img/logo.png">
         <p><i>The future of crypto</i></p>
         <a href="barkpaper.pdf" class="btn btn-primary" target="_blank">Read our Barkpaper</a>
     </div>
+    
+    <!-- Footer -->
+    <div class="footer"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- web3 functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js" integrity="sha512-S/O+gH5szs/+/dUylm15Jp/JZJsIoWlpSVMwT6yAS4Rh7kazaRUxSzFBwnqE2/jBphcr7xovTQJaopiEZAzi+A==" crossorigin="anonymous"></script>
+    <script src="js/metamask.js"></script>
   </body>
 </html>

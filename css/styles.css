@@ -1,0 +1,32 @@
+.box {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    min-height:100vh;
+    width: auto;
+    text-align: center;
+}
+
+.box img {
+    margin: 10px auto;
+}
+
+.box .btn {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.box .btn:hover {
+    background-color: lime;
+    color: white;
+}

@@ -75,6 +75,39 @@ ul.navbar-nav li.current a {
 	background:#0c940c;
 }
 
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#toxicModal {
+    overflow: hidden;
+}
+
+.modal {
+    height: 600px;
+}
+
+.modal-footer .btn-primary {
+    border: 1px solid #0d791f;
+    background-color: #0d791f;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.modal-footer .btn-secondary {
+    border: 1px solid #0c940c;
+    background-color: #0c940c;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0c940c;
+}
+
 .footer {
     position: fixed;
     left: 0;

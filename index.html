@@ -35,6 +35,9 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#toxicModal">TOXIC Message</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#" onclick=addmm()>Add to MetaMask</a>
                 </li>
             </ul>
@@ -48,7 +51,42 @@
         <p><i>The future of crypto</i></p>
         <a href="barkpaper.pdf" class="btn btn-primary" target="_blank">Read our Barkpaper</a>
     </div>
-    
+
+    <!-- Modal -->
+    <div class="modal fade center" id="toxicModal" tabindex="-1" role="dialog" aria-labelledby="toxicModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="toxicModalLabel">Send TOXIC Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/toxic" method="post">
+                        <div class="form-group">
+                            <label for="enemy-address" class="col-form-label">Enemy Address</label>
+                            <input type="text" class="form-control" id="enemy-address">
+                        </div>
+                        <div class="form-group">
+                            <label for="ammo-amount" class="col-form-label">Ammo Amount</label>
+                            <input type="text" class="form-control" id="ammo-amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="toxic-message" class="col-form-label">Toxic Message</label>
+                            <!-- <input type="text" class="form-control" id="toxic-message"> -->
+                            <textarea type="text" class="form-control" id="toxic-message" rows="4" style="resize: none;"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">TOXIC Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <div class="footer"></div>
 

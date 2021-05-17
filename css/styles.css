@@ -43,11 +43,12 @@ nav.navbar {
 }
 
 ul.mr-auto li {
-    border-right:1px solid #0c940c;
+    border-right: 1px solid #0c940c;
 }
 
 ul.ml-auto li {
-    border-left:1px solid #0c940c;
+    width: 160px;
+    border-left: 1px solid #0c940c;
 }
 
 ul.navbar-nav {

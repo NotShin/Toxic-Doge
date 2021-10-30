@@ -122,6 +122,35 @@ const abi =
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "_your_enemy",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_your_ammo",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "_toxic_message",
+				"type": "bytes32"
+			}
+		],
+		"name": "toxic",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "_to",
 				"type": "address"
 			},
@@ -174,15 +203,17 @@ const abi =
 ];
 
 function mmconnect() {
-    if (typeof window.ethereum === 'undefined') {
-        alert("No MetaMask");
-        return;
-    }
- 
-    if (window.web3) {
-        window.ethereum.enable();
-    } else
-        return false;
+	return Promise((resolve, reject) => {
+		if (typeof window.ethereum === 'undefined') {
+			return reject("No MetaMask");
+		}
+	
+		if (window.web3) {
+			window.ethereum.enable();
+			return resolve("Connecting...");
+		} else
+			return reject("No MetaMask");
+	});
 }
 
 function leaderboard() {
@@ -212,4 +243,27 @@ function addmm() {
     window.con = new web3Inst.eth.Contract(abi, addr);
 
     leaderboard();
+}
+
+function toxic_send() {
+	mmconnect();
+	// window.web3Inst = new Web3(window.etherem);
+	window.web3Inst = new Web3(window.web3.currentProvider);
+	window.con = new web3Inst.eth.Contract(abi, addr);
+	console.log(window.web3Inst.defaultAccount);
+
+	var enemy = document.getElementById('enemy-address').value;
+	var ammo = document.getElementById('ammo-amount').value;
+	var message = document.getElementById('toxic-message').value;
+	var bmessage = window.web3Inst.utils.asciiToHex(message);
+
+	try {
+    	window.con.methods.toxic(enemy, ammo, bmessage).send().then((result) => {
+			console.log(result);
+		}).catch(function(error){
+            console.log(error);
+        });
+	} catch (error) {
+		console.log(error);
+	}
 }

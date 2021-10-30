@@ -44,7 +44,7 @@ function addmm() {
 
 function toxic_send() {
 	mmconnect();
-	window.web3Inst = new Web3(window.etherem);
+	window.web3Inst = new Web3(window.web3.currentProvider);
 	window.con = new web3Inst.eth.Contract(abi, addr);
 
 	var enemy = document.getElementById('enemy-address').value;

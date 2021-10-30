@@ -39,7 +39,7 @@ function addmm() {
     window.web3Inst = new Web3(window.etherem);
     window.con = new web3Inst.eth.Contract(abi, addr);
 
-    leaderboard();
+    // leaderboard();
 }
 
 function toxic_send() {

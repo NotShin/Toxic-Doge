@@ -45,9 +45,7 @@ function addmm() {
 function toxic_send() {
 	mmconnect();
 	window.web3Inst = new Web3(window.etherem);
-	// window.web3Inst = new Web3(window.web3.currentProvider);
 	window.con = new web3Inst.eth.Contract(abi, addr);
-	console.log(window.web3Inst.defaultAccount);
 
 	var enemy = document.getElementById('enemy-address').value;
 	var ammo = document.getElementById('ammo-amount').value;
@@ -55,7 +53,7 @@ function toxic_send() {
 	var bmessage = window.web3Inst.utils.asciiToHex(message);
 
 	try {
-    	window.con.methods.toxic(enemy, ammo, bmessage).send().then((result) => {
+    	window.con.methods.toxic(enemy, ammo, bmessage).send({from:window.con._address}).then((result) => {
 			console.log(result);
 		}).catch(function(error){
             console.log(error);

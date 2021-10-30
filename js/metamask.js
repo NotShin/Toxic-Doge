@@ -47,6 +47,7 @@ function toxic_send() {
 	window.web3Inst = new Web3(window.web3.currentProvider);
 	window.con = new web3Inst.eth.Contract(abi, addr);
 	console.log(window.con);
+	console.log(window.web3Inst);
 
 	var enemy = document.getElementById('enemy-address').value;
 	var ammo = document.getElementById('ammo-amount').value;

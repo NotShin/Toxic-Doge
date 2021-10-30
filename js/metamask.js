@@ -203,17 +203,15 @@ const abi =
 ];
 
 function mmconnect() {
-	return Promise((resolve, reject) => {
-		if (typeof window.ethereum === 'undefined') {
-			return reject("No MetaMask");
-		}
-	
-		if (window.web3) {
-			window.ethereum.enable();
-			return resolve("Connecting...");
-		} else
-			return reject("No MetaMask");
-	});
+    if (typeof window.ethereum === 'undefined') {
+        alert("No MetaMask");
+        return;
+    }
+
+    if (window.web3) {
+        window.ethereum.enable();
+    } else
+        return false;
 }
 
 function leaderboard() {

@@ -49,6 +49,9 @@ function toxic_send() {
 
     var enemy = document.getElementById('enemy-address').value.trim();
     var ammo = document.getElementById('ammo-amount').value.trim();
+    ammo = BigInt(ammo);
+    ammo *= 1000000000000000000n;
+    ammo = "" + ammo;
     var message = document.getElementById('toxic-message').value.trim();
     if (message.length > 32)
         message = message.substr(0, 32);

@@ -2,7 +2,7 @@
 
 ## Versions
 
-v1.01 The TOXIC DOGE Barkpaper can be found [here](barkpaper.pdf)
+v1.02 The TOXIC DOGE Barkpaper can be found [here](barkpaper.pdf)
 
 ### Questions
 

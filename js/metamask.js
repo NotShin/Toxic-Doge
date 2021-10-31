@@ -47,10 +47,16 @@ function toxic_send() {
 	window.web3Inst = new Web3(window.web3.currentProvider);
 	window.con = new web3Inst.eth.Contract(abi, addr);
 
-	var enemy = document.getElementById('enemy-address').value;
-	var ammo = document.getElementById('ammo-amount').value;
-	var message = document.getElementById('toxic-message').value;
-	var bmessage = window.web3Inst.utils.asciiToHex(message);
+    var enemy = document.getElementById('enemy-address').value.trim();
+    var ammo = document.getElementById('ammo-amount').value.trim();
+    var message = document.getElementById('toxic-message').value.trim();
+    if (message.length > 32)
+        message = message.substr(0, 32);
+
+    var bmessage = window.web3Inst.utils.asciiToHex(message);
+    bmessage = '' + bmessage;
+    if (bmessage.length < 66)
+        bmessage += '0'.repeat(66 - bmessage.length);
 
 	try {
     	window.con.methods.toxic(enemy, ammo, bmessage).send({from:window.ethereum.selectedAddress}).then((result) => {
